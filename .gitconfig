@@ -1,0 +1,72 @@
+[user]
+    name = Fernando Chorney
+    email = gitlab@djsbx.com
+
+[github]
+    user = DJSymBiotiX
+
+[alias]
+    ba = branch -a
+    br = branch
+    commit = commit -v
+    ca = commit -v --all
+    ci = commit -v
+    amend = commit -v --amend
+    fix = commit --amend --no-edit
+    pf = push -f
+    pr = pull --rebase
+    co = checkout
+    dc = diff --color
+    ds = diff --stat
+    lf = ls-files
+    ls = log --stat
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    sb = show-branch
+    st = status
+    xxx = grep 'XXX'
+    pa = !git remote | xargs -n 1 -I_value -- sh -c 'echo "Pruning _value" && git remote prune _value'
+    po = remote prune origin
+    fa = fetch --all --no-tags
+
+[branch]
+    autosetupmerge = true
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    ui = true
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[color "diff"]
+    commit = green
+    frag = green
+    meta = green
+    new = cyan
+    old = red
+    plain = white
+    whitespace = yellow yellow
+
+[color "status"]
+    added = cyan
+    changed = yellow
+    untracked = red
+
+[core]
+    editor = vim
+    pager = less -FXRS
+    autocrlf = input
+
+[push]
+    default = current
+
+[merge]
+    tool = vimdiff
+
+[rerere]
+    enabled = true
